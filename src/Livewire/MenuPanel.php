@@ -9,7 +9,7 @@ use Datlechin\FilamentMenuBuilder\Models\Menu;
 use Filament\Forms\Components;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
+use Filament\Schemas\Schema;
 use Filament\Notifications\Notification;
 use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Validate;
@@ -100,7 +100,7 @@ class MenuPanel extends Component implements HasForms
             ->send();
     }
 
-    public function form(Form $form): Form
+    public function form(Schema $form): Schema
     {
         $items = collect($this->getItems())->mapWithKeys(fn ($item) => [$item['linkable_id'] ?? $item['title'] => $item['title']]);
 

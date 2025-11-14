@@ -2,6 +2,13 @@
 
 All notable changes to `filament-menu-builder` will be documented in this file.
 
+## v4.0.0-alpha - 2025-11-14
+
+### What's Changed
+
+* Add native Filament v4 support (Schema-based forms, new action namespaces, PHP 8.2 minimum).
+* Rename the package to `earl761/filament-menu-builder` so it can be published independently.
+
 ## v0.7.0 - 2025-05-30
 
 ### What's Changed

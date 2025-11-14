@@ -1,7 +1,4 @@
-# Filament Menu Builder
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/datlechin/filament-menu-builder.svg?style=flat-square)](https://packagist.org/packages/datlechin/filament-menu-builder)
-[![Total Downloads](https://img.shields.io/packagist/dt/datlechin/filament-menu-builder.svg?style=flat-square)](https://packagist.org/packages/datlechin/filament-menu-builder)
+# Filament Menu Builder (Filament v4 compatible)
 
 This [Filament](https://filamentphp.com) package allows you to create and manage menus in your Filament application.
 
@@ -12,10 +9,34 @@ This [Filament](https://filamentphp.com) package allows you to create and manage
 
 ## Installation
 
-You can install the package via composer:
+### Using this fork today
+
+Until this fork is tagged on Packagist, point Composer at the GitHub repository:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/earl761/filament-menu-builder.git"
+        }
+    ],
+    "require": {
+        "earl761/filament-menu-builder": "dev-main"
+    }
+}
+```
+
+Then install it as usual:
 
 ```bash
-composer require datlechin/filament-menu-builder
+composer update earl761/filament-menu-builder
+```
+
+After the package is published on Packagist you can switch back to:
+
+```bash
+composer require earl761/filament-menu-builder
 ```
 
 You need to publish the migrations and run them:
@@ -442,3 +463,9 @@ Please review [our security policy](https://github.com/datlechin/filament-menu-b
 ## License
 
 The MIT License (MIT). Please see [License File](https://github.com/datlechin/filament-menu-builder/raw/main/LICENSE.md) for more information.
+
+## Publishing this fork on Packagist
+
+1. Push your changes to GitHub (for example `https://github.com/earl761/filament-menu-builder`) and create a semantic version tag such as `v4.0.0`.
+2. Log into [Packagist](https://packagist.org/) and submit the repository URL. Packagist reads the `composer.json` name (`earl761/filament-menu-builder`) and watches the repo for new tags automatically.
+3. After Packagist imports the package, projects can install it via `composer require earl761/filament-menu-builder`.
